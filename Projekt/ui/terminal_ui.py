@@ -1,6 +1,5 @@
 import os
 from datetime import datetime, timedelta
-from typing import Optional
 from services.document_service import DocumentService
 
 class TerminalUI:
