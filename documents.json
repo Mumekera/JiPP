@@ -1,0 +1,148 @@
+{
+  "documents": [
+    {
+      "uuid": "d1b2c3d4-e5f6-4a1b-8c2d-3e4f5a6b7c8d",
+      "title": "Plan zagospodarowania przestrzennego miasta",
+      "year": 2023,
+      "category": "Dokumentacja techniczna",
+      "storage_location": "Archiwum A1",
+      "copies": 3,
+      "history": [
+        {
+          "action": "added",
+          "user": "admin",
+          "date": "2024-01-10T09:00:00"
+        }
+      ],
+      "borrowed_by": null,
+      "return_date": null,
+      "last_modified_by": "admin",
+      "last_modified_date": "2024-01-10T09:00:00"
+    },
+    {
+      "uuid": "a1b2c3d4-e5f6-4a1b-8c2d-3e4f5a6b7c8e",
+      "title": "Księga protokołów zebrań rady miasta 2023",
+      "year": 2023,
+      "category": "Dokumenty urzędowe",
+      "storage_location": "Pokój 101",
+      "copies": 1,
+      "history": [
+        {
+          "action": "added",
+          "user": "admin",
+          "date": "2024-02-15T10:30:00"
+        }
+      ],
+      "borrowed_by": "sekretarz",
+      "return_date": "2024-04-30T00:00:00",
+      "last_modified_by": "admin",
+      "last_modified_date": "2024-02-15T10:30:00"
+    },
+    {
+      "uuid": "b1b2c3d4-e5f6-4a1b-8c2d-3e4f5a6b7c8f",
+      "title": "Sprawozdanie finansowe za rok 2023",
+      "year": 2024,
+      "category": "Dokumenty finansowe",
+      "storage_location": "Sejf główny",
+      "copies": 2,
+      "history": [
+        {
+          "action": "added",
+          "user": "ksiegowy",
+          "date": "2024-03-01T11:00:00"
+        }
+      ],
+      "borrowed_by": null,
+      "return_date": null,
+      "last_modified_by": "ksiegowy",
+      "last_modified_date": "2024-03-01T11:00:00"
+    },
+    {
+      "uuid": "c1b2c3d4-e5f6-4a1b-8c2d-3e4f5a6b7c8g",
+      "title": "Projekt remontu budynku ratusza",
+      "year": 2024,
+      "category": "Projekty budowlane",
+      "storage_location": "Archiwum B2",
+      "copies": 5,
+      "history": [
+        {
+          "action": "added",
+          "user": "architekt",
+          "date": "2024-02-20T13:45:00"
+        }
+      ],
+      "borrowed_by": "inspektor",
+      "return_date": "2024-05-15T00:00:00",
+      "last_modified_by": "architekt",
+      "last_modified_date": "2024-02-20T13:45:00"
+    },
+    {
+      "uuid": "e1b2c3d4-e5f6-4a1b-8c2d-3e4f5a6b7c8h",
+      "title": "Umowy z wykonawcami Q1 2024",
+      "year": 2024,
+      "category": "Umowy",
+      "storage_location": "Szafa S1",
+      "copies": 1,
+      "history": [
+        {
+          "action": "added",
+          "user": "prawnik",
+          "date": "2024-03-15T14:20:00"
+        }
+      ],
+      "borrowed_by": null,
+      "return_date": null,
+      "last_modified_by": "prawnik",
+      "last_modified_date": "2024-03-15T14:20:00"
+    },
+    {
+      "uuid": "f1b2c3d4-e5f6-4a1b-8c2d-3e4f5a6b7c8i",
+      "title": "Plan ewakuacji budynku",
+      "year": 2024,
+      "category": "Dokumenty BHP",
+      "storage_location": "Korytarz główny",
+      "copies": 10,
+      "history": [
+        {
+          "action": "added",
+          "user": "bhp_specjalista",
+          "date": "2024-01-05T09:30:00"
+        }
+      ],
+      "borrowed_by": null,
+      "return_date": null,
+      "last_modified_by": "bhp_specjalista",
+      "last_modified_date": "2024-01-05T09:30:00"
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "role": "administrator"
+    },
+    {
+      "username": "sekretarz",
+      "role": "pracownik"
+    },
+    {
+      "username": "ksiegowy",
+      "role": "pracownik"
+    },
+    {
+      "username": "architekt",
+      "role": "specjalista"
+    },
+    {
+      "username": "inspektor",
+      "role": "pracownik"
+    },
+    {
+      "username": "prawnik",
+      "role": "specjalista"
+    },
+    {
+      "username": "bhp_specjalista",
+      "role": "specjalista"
+    }
+  ]
+}
