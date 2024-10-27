@@ -10,10 +10,18 @@ class DocumentRepository:
     
     def _load_documents(self) -> List[Document]:
         try:
-            with open(self.file_path, 'r') as f:
+            with open(self.file_path, 'r', encoding='utf-8') as f:  # dodajemy encoding='utf-8'
                 data = json.load(f)
-                return [Document.from_dict(doc_data) for doc_data in data]
+                if isinstance(data, dict) and 'documents' in data:
+                    return [Document.from_dict(doc_data) for doc_data in data['documents']]
+                return []
         except FileNotFoundError:
+            return []
+        except json.JSONDecodeError as e:
+            print(f"Błąd podczas parsowania pliku JSON: {e}")
+            return []
+        except Exception as e:
+            print(f"Nieoczekiwany błąd: {e}")
             return []
     
     def _save_documents(self):

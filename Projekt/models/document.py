@@ -1,6 +1,5 @@
 from datetime import datetime
 import uuid
-from typing import List, Optional
 
 class Document:
     def __init__(self, title: str, year: int, category: str, storage_location: str, 
@@ -34,17 +33,24 @@ class Document:
     
     @classmethod
     def from_dict(cls, data: dict):
-        doc = cls(
-            title=data['title'],
-            year=data['year'],
-            category=data['category'],
-            storage_location=data['storage_location'],
-            copies=data['copies']
-        )
-        doc.uuid = data['uuid']
-        doc.history = data['history']
-        doc.borrowed_by = data['borrowed_by']
-        doc.return_date = datetime.fromisoformat(data['return_date']) if data['return_date'] else None
-        doc.last_modified_by = data['last_modified_by']
-        doc.last_modified_date = datetime.fromisoformat(data['last_modified_date']) if data['last_modified_date'] else None
-        return doc
+        try:
+            doc = cls(
+                title=data['title'],
+                year=data['year'],
+                category=data['category'],
+                storage_location=data['storage_location'],
+                copies=data['copies']
+            )
+            doc.uuid = data['uuid']
+            doc.history = data['history']
+            doc.borrowed_by = data['borrowed_by']
+            doc.return_date = datetime.fromisoformat(data['return_date']) if data['return_date'] else None
+            doc.last_modified_by = data['last_modified_by']
+            doc.last_modified_date = datetime.fromisoformat(data['last_modified_date']) if data['last_modified_date'] else None
+            return doc
+        except KeyError as e:
+            print(f"Brak wymaganego pola w danych dokumentu: {e}")
+            raise
+        except Exception as e:
+            print(f"Błąd podczas tworzenia dokumentu z danych: {e}")
+            raise
